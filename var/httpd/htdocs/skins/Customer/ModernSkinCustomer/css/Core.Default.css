@@ -1,17 +1,24 @@
 /*
  * Copyright (C) 2020–present Efflux GmbH, https://efflux.de/
  * Part of the ModernSkinCustomer package.
+ * Copyright (C) 2023 Università di Genova (contributor)) https://unige.it/
  *
  * This software comes with ABSOLUTELY NO WARRANTY. For details, see
  * the enclosed file COPYING for license information (GPL). If you
  * did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
  */
 
+:root {
+    --header-fg-color: #ffffff;
+    --header-bg-color: #19475b;
+    --input-field-width: 614px;
+}
+
 /* 
 	Background: #f2f4f5; Second: #ffffff
-	Header: #19475b
+	Header: var(--header-bg-color)
 	Border: #e3e7ea; Active: #4d90fe
-	Icons: #19475b; Hover: #028b8b
+	Icons: var(--header-bg-color); Hover: #028b8b
 	Text/a: #444444; Hover: #335b6e
 
 	Border radius: 3px
@@ -41,28 +48,20 @@ h1 {
 #Navigation > ul > li > ul, .TicketCompose .Content, .Preferences .Content, .Search .Content, .FieldHelpContainer > span,
 #MainBox.TicketView, .TicketProcess .LayoutPopup, #FollowUp.Visible #Messenger, #ReplyCustomerTicket #Messages li:nth-child(even),
 .ModernSkinBox, #Login, #Reset, #Signup, #PreLogin, #MainBox > .Content.Error {
-	background: #ffffff;
+	background: var(--header-fg-color);
 	box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
 	border-radius: 3px;
 }
 
 /* Header */
 #Header {
-	background: #19475b;
+	background: var(--header-bg-color);
 	padding: 0px;
 	height: 61px;
 }
 
 #Header a {
-	color: #ffffff;
-}
-
-#Header #Logo {
-	top: 5px !important;
-	right: 0px !important;
-	width: 300px !important;
-	height: 45px !important;
-	left: 19px !important;
+	color: var(--header-fg-color);
 }
 
 h1.CompanyName {
@@ -70,7 +69,7 @@ h1.CompanyName {
 }
 
 #Navigation {
-	background: #ffffff;
+	background: var(--header-fg-color);
 	height: 39px;
 }
 
@@ -103,7 +102,7 @@ h1.CompanyName {
 }
 
 #Navigation .Selected > a {
-	border-bottom: 2px solid #19475b;
+	border-bottom: 2px solid var(--header-bg-color);
 }
 
 #Navigation > ul > li:hover > a {
@@ -111,7 +110,7 @@ h1.CompanyName {
 }
 
 #Navigation .Selected, #Navigation .Selected:active, #Navigation > ul > li:hover {
-	background: #ffffff !important;
+	background: var(--header-fg-color) !important;
 }
 
 #Navigation > ul > li > ul {
@@ -204,7 +203,7 @@ div.InputField_TreeContainer, .ui-widget-content, .ui-widget-header .ui-state-de
 }
 
 .jstree-InputField .jstree-wholerow-ul .jstree-anchor.jstree-clicked {
-	color: #ffffff !important;
+	color: var(--header-fg-color) !important;
 }
 
 .jstree-InputField .jstree-wholerow-ul .jstree-wholerow:hover, .jstree-InputField .jstree-wholerow-ul .jstree-wholerow-hovered, 
@@ -229,7 +228,7 @@ div.InputField_TreeContainer, .ui-widget-content, .ui-widget-header .ui-state-de
 
 .cke_top, .cke_bottom {
 	border: none !important;
-	background: #ffffff !important;
+	background: var(--header-fg-color) !important;
 }
 
 .cke_inner, .cke_top, .cke_bottom {
@@ -251,7 +250,7 @@ div.Tooltip > div.Content {
 }
 
 #BottomActionRow {
-	background: #ffffff;
+	background: var(--header-fg-color);
 	margin-left: 125px;
 }
 
@@ -401,7 +400,7 @@ td.Age {
 
 /* New Ticket */
 .TicketZoom[role=main] .Content {
-	background: #ffffff !important;
+	background: var(--header-fg-color) !important;
 	box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
 	border-radius: 3px !important;
 	min-height: 300px;
@@ -432,7 +431,7 @@ form#ReplyCustomerTicket .ActionRow {
 	font-size: 14px;
 	background-color: #028b8b;
 	border-radius: 3px !important;
-	color: #ffffff;
+	color: var(--header-fg-color);
 	top: 0px;
 	width: 150px;
 	margin: 0px;
@@ -453,7 +452,7 @@ fieldset p {
 
 #ReplyButton:hover, #submitRichText:hover, button.Primary:hover {
 	background-color: #4ecac2;
-	color: #ffffff;
+	color: var(--header-fg-color);
 }
 
 #Messages {
@@ -502,7 +501,7 @@ fieldset p {
 }
 
 #ReplyCustomerTicket #Messages li:nth-child(even) .MessageBrowser p {
-	background-color: #ffffff !important;
+	background-color: var(--header-fg-color) !important;
 }
 
 #ReplyCustomerTicket #Messages li:nth-child(even), #ReplyCustomerTicket #Messages li:nth-child(even) .MessageContent {
@@ -521,7 +520,7 @@ fieldset p {
 	font-size: 14px;
 	background-color: #028b8b;
 	border-radius: 3px !important;
-	color: #ffffff;
+	color: var(--header-fg-color);
 	top: 0px;
 	width: 150px;
 	margin: 0px;
@@ -532,7 +531,7 @@ fieldset p {
 }
 
 .TicketZoom iframe {
-	background-color: #ffffff;
+	background-color: var(--header-fg-color);
 	border-radius: 3px;
 }
 
@@ -549,7 +548,7 @@ fieldset p {
 }
 
 .fa-navicon:before, .fa-reorder:before, .fa-bars:before, .fa-remove:before, .fa-close:before, .fa-times:before, .fa-print:before {
-	color: #19475b !important;
+	color: var(--header-bg-color) !important;
 }
 
 #TicketOptions .Print:hover .fa-bars:before, #TicketOptions .ZoomExpand:hover .fa-bars:before, .MessageBrowser a.Close:hover .fa-times:before,
@@ -567,7 +566,7 @@ fieldset p {
 }
 
 .DnDUpload.AjaxDnDUploadReady, #Messenger #Subject {
-	background: #ffffff;
+	background: var(--header-fg-color);
 }
 
 .DataTable {
@@ -590,7 +589,7 @@ td i, td a i {
 
 .DataTable thead th, .TableSmall thead th {
 	text-transform: none;
-	background: #ffffff;
+	background: var(--header-fg-color);
 	font-size: 1em;
 	font-weight: bold !important;
 	color: #757575 !important;
@@ -634,7 +633,7 @@ fieldset h2 {
 }
 
 .PopupFooter {
-	background: #ffffff !important;
+	background: var(--header-fg-color) !important;
 	border-radius: 3px !important;
 	border: none !important;
 	margin-top: 10px;
@@ -642,13 +641,13 @@ fieldset h2 {
 }
 
 .FieldHelpContainer > span {
-	background-color: #19475b !important;
+	background-color: var(--header-bg-color) !important;
 	text-shadow: none !important;
 	opacity: 0.95 !important;
 }
 
 .FieldHelpContainer .FieldHelpTrigger {
-	color: #19475b !important;
+	color: var(--header-bg-color) !important;
 }
 
 .FieldHelpContainer .FieldHelpTrigger:hover {
@@ -730,7 +729,7 @@ div.InputField_ToolbarContainer ul li a, div.InputField_ToolbarContainer ul li a
 }
 
 div.InputField_ToolbarContainer ul li a:hover {
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 1px solid var(--header-fg-color);
 }
 
 input[type=text][readonly], input[type=password][readonly], input[type=email][readonly], textarea[readonly] {
@@ -741,7 +740,7 @@ input[type=text][readonly], input[type=password][readonly], input[type=email][re
 
 /* jQuery Datepicker */
 .DatepickerIcon {
-	color: #19475b;
+	color: var(--header-bg-color);
 }
 
 .ui-datepicker td {
@@ -812,7 +811,7 @@ td.ui-datepicker-days-cell-over, td.ui-datepicker-current-day {	/* Selected day.
 }
 
 .ui-datepicker-days-cell-over:not(.Highlight) a.ui-state-default {
-	color: #ffffff;
+	color: var(--header-fg-color);
 }
 
 .ui-datepicker-days-cell-over.Highlight a.ui-state-default {	/* Holiday */
@@ -888,7 +887,7 @@ td.ui-datepicker-days-cell-over, td.ui-datepicker-current-day {	/* Selected day.
 
 .Login button[type="submit"] {
 	background-color: #028b8b;
-	color: #ffffff;
+	color: var(--header-fg-color);
 	border-color: #028b8b;
 	border: 0;
 	width: 100%;
@@ -940,7 +939,7 @@ td.ui-datepicker-days-cell-over, td.ui-datepicker-current-day {	/* Selected day.
 }
 
 .MessageBox.Error p {
-	color: #ffffff;
+	color: var(--header-fg-color);
 }
 
 .SuccessBox {
@@ -961,6 +960,14 @@ input[type=text]:not([readonly]):focus, input[type=email]:focus, input[type=pass
 textarea:focus, select[multiple=multiple]:focus, form #cke_RichText:focus, div.DnDUpload:focus {
 	border-color: #4d90fe !important;
 }
+
+        .InputField_Search {
+            min-width: var(--input-field-width);
+        }
+        
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: var(--input-field-width);
+        }
 
 /* Some duplicate responsive rules */
 @media only screen and (max-width: 1024px) and (min-width: 0px) {
@@ -1053,7 +1060,7 @@ textarea:focus, select[multiple=multiple]:focus, form #cke_RichText:focus, div.D
 	}
 
 	#Navigation .Selected > a, #Navigation > ul > li:hover > a {
-		color: #ffffff !important;
+		color: var(--header-fg-color) !important;
 		border-bottom: none;
 	}
 
@@ -1074,16 +1081,16 @@ textarea:focus, select[multiple=multiple]:focus, form #cke_RichText:focus, div.D
 	}
 	
 	#Navigation {
-		background-color: #19475b !important;
+		background-color: var(--header-bg-color) !important;
 	}
 
 	.Visible-ScreenXS #Navigation > ul >li > a {
 		border-top: none !important;
-		color: #ffffff !important;
+		color: var(--header-fg-color) !important;
 	}
 
 	#ZoomSidebar, .SidebarColumn {
-		background: #19475b !important;
+		background: var(--header-bg-color) !important;
 	}
 
 	#Metadata, #Activities {
@@ -1101,6 +1108,7 @@ textarea:focus, select[multiple=multiple]:focus, form #cke_RichText:focus, div.D
 
 	#NewCustomerTicket input.InputField_Search {
 		padding: 5px;
+                min-width: var(--input-field-width);
 	}
 
 	.DnDUpload.AjaxDnDUploadReady {
